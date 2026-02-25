@@ -1,0 +1,44 @@
+/* ===== 全ページ共通 ===== */
+body{
+  margin:0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN","MS Mincho",serif;
+  background:#f6f4ef;
+  color:#111;
+}
+
+/* ===== 共通UIボタン ===== */
+.ui-btn{
+  font-family:inherit;
+  font-size:16px;
+  text-decoration:none;
+  color:#111;
+  border:2px solid #111;
+  padding:12px 34px;
+  background:transparent;
+  display:inline-block;
+
+  border-radius: 8px; 
+
+  box-shadow:0 4px 0 rgba(0,0,0,0.35);
+  transform:translateY(0);
+
+  transition:
+    transform .26s cubic-bezier(.34,1.56,.64,1),
+    box-shadow .18s ease,
+    background .12s ease,
+    color .12s ease;
+    }
+
+/* hover（PC） */
+.ui-btn:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* 押した時（スマホ・JS） */
+.ui-btn.tap{
+  background:#111;
+  color:#fff;
+  transform:translateY(4px);
+  box-shadow:0 0 0 rgba(0,0,0,0.35);
+}

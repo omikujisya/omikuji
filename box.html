@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>おみくじ箱</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+  <main class="box-wrap">
+  <div class="box-area">
+    <!-- おみくじ箱 -->
+    <img src="img/box.svg" alt="おみくじ箱" class="omikuji-box">
+    <!-- 棒-->
+    <div class="stick" id="stick"></div>
+  </div>
+
+    <!-- 説明文　-->
+  <p class="box-guide">
+  おみくじ箱をクリックすると箱が揺れます。<br>
+  もう一度、箱をクリックするとおみくじが引けます。
+  </p>
+
+  </main>
+  <audio id="sound-shake" src="audio/goro.mp3" preload="auto"></audio>
+
+  <!-- 音オンオフ -->
+  <button id="sound-toggle" class="sound-btn">
+  <img id="sound-icon" src="img/otoon.svg" alt="sound">
+</button>
+
+<script src="js/utils.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/box.js"></script>
+
+</body>
+</html>

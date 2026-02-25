@@ -1,0 +1,119 @@
+
+/* ===== レイアウト ===== */
+.top-wrap {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== タイトル ===== */
+.top-title {
+  writing-mode: vertical-rl;
+  white-space: nowrap;   /* ←これ追加 */
+  font-size: 38px;
+  letter-spacing: 0.15em;
+  margin: 0 0 24px 0;
+}
+
+/* ===== 説明 ===== */
+.top-description {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+  letter-spacing: 0.05em;
+}
+
+/* ===== ボタン ===== */
+.draw-btn {
+  font-size: 16px;
+  text-decoration: none;
+  color: #111;
+  padding: 10px 26px;
+  border: 2px solid #111;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* ホバー時（神社っぽく静かに） */
+.draw-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.sound-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sound-btn img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.sound-btn:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 600px){
+
+  .top-title{
+    font-size:36px;
+  }
+
+  .draw-btn{
+    font-size:18px;
+    padding:12px 32px;
+  }
+
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== トップ情報（日付＋人数） ===== */
+
+.top-info{
+  text-align:center;
+  margin-bottom: 26px;
+}
+
+#omikuji-time{
+  font-size:14px;
+  margin-bottom:2px;
+  opacity:0.9;
+}
+
+.visitor-count{
+  font-size:14px;
+  opacity:0.85;
+}
+
+.count-num{
+  font-size:18px;
+  font-weight:600;
+  padding:0 3px;
+}
+
+.top-logo-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ロゴサイズ */
+.site-logo{
+  width:64px;
+  height:auto;
+  margin-bottom:12px;
+}

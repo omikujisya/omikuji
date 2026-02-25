@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>おみくじ杜</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/common.css">
+  <!-- トップ専用CSS -->
+  <link rel="stylesheet" href="css/top.css">
+</head>
+
+<body>
+
+  <button id="sound-toggle" class="sound-btn">
+  <img id="sound-icon" src="img/otoon.svg" alt="sound">
+  </button>
+
+  <main class="top-wrap">
+
+    <!-- タイトル（縦書き） -->
+    <div class="top-logo-title">
+
+  <img src="img/logo.svg" class="site-logo" alt="おみくじ杜ロゴ">
+
+  <h1 class="top-title">
+    おみくじ杜
+  </h1>
+
+    </div>
+    
+    <!-- 説明 -->
+    <p class="top-description">
+      無料おみくじ<br>
+      今のあなたに必要な言葉を受け取ってください。
+    </p>
+
+  <div class="top-info">
+    <div id="omikuji-time"></div>
+    <div class="visitor-count">
+      <div id="today-count"></div>
+      <div id="total-count"></div>
+    </div>
+  </div>
+
+    <!-- ボタン -->
+    <a href="box.html" class="draw-btn ui-btn">
+      くじを引く
+    </a>
+
+  </main>
+
+  <audio id="suzu-start" src="audio/suzu.mp3" preload="auto"></audio>
+ 
+  <script src="js/utils.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/top.js"></script>
+
+</body>
+</html>
+
+

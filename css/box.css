@@ -1,0 +1,137 @@
+
+/* 中央配置 */
+.box-wrap {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  justify-content: center;
+  
+}
+
+.box-area {
+  position: relative;
+}
+
+/* おみくじ箱 */
+.omikuji-box {
+  width: 520px;
+  height: auto;
+  background: transparent;
+  display: block;
+  transform-origin: center 85%;
+  cursor: pointer;
+  transition: transform 0.08s ease;
+
+}
+
+.omikuji-box:active {
+  transform: scale(0.96);
+}
+
+/* ===== 揺れアニメーション ===== */
+@keyframes shake-big {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(8deg) translateY(2px); }
+  50% { transform: rotate(0deg) translateY(4px); }
+  75% { transform: rotate(-8deg) translateY(2px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes shake-mid {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(4deg) translateY(1.5px); }
+  50% { transform: rotate(0deg) translateY(3px); }
+  75% { transform: rotate(-4deg) translateY(1.5px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes shake-small {
+  0% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(2deg) translateY(1px); }
+  50% { transform: rotate(0deg) translateY(2px); }
+  75% { transform: rotate(-2deg) translateY(1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+.shake-big { animation: shake-big 1.2s ease-in-out; }
+.shake-mid { animation: shake-mid 1.2s ease-in-out; }
+.shake-small { animation: shake-small 1.2s ease-in-out; }
+
+/* 説明文 */
+.box-guide {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  color: #111;
+}
+
+/* 棒 */
+.stick {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 78%;
+  width: 22px;
+  height: 0;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #fdfcf7;
+  line-height: 22px;
+  overflow: hidden;
+  transition: height 0.6s ease;
+  z-index: 1;
+}
+
+.stick.show {
+  height: 140px;
+}
+
+.sound-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sound-btn img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.sound-btn:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 600px){
+
+  .omikuji-box{
+    width: 88vw;
+    max-width: 460px;
+  }
+
+  .stick{
+    width: 4vw;
+    font-size: 3vw;
+  }
+
+  .box-guide{
+    font-size: 15px;
+    padding:0 16px;
+  }
+
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+}

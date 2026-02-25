@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>おみくじ杜</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/omikuji.css">
+</head>
+<body>
+<div class="omikuji-outer">
+  <div class="omikuji-inner">
+
+    <div class="paper-header">
+
+  <img src="img/logo.svg" class="paper-logo" alt="おみくじ杜ロゴ">
+
+  <div class="shrine-name">おみくじ杜</div>
+  <div class="title">おみくじ</div>
+  <div class="number"></div>
+
+</div>   <!-- ★ここ追加：paper-header閉じる -->
+
+<div class="fortune-main"></div>
+
+<div class="haiku"></div>
+
+<div class="picture">
+  <img src="" alt="おみくじの絵">
+</div>
+    <div class="fortune-table">
+      <div class="fortune-row">
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+      </div>
+
+      <div class="fortune-row">
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+        <div class="fortune-item"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="fortune-note">
+  ※おみくじの結果が必ずしもその通りになるとは限りません。
+心の道しるべとしてお受け取りください。
+</div>
+
+</div>
+
+<div class="bottom-buttons">
+  <button class="tie-btn ui-btn">おみくじを結ぶ</button>
+  <a href="index.html" class="back-btn ui-btn">最初に戻る</a>
+</div>
+
+<button id="sound-toggle" class="sound-btn">
+  <img id="sound-icon" src="img/otoon.svg" alt="sound">
+</button>
+
+<audio id="suzu" src="audio/suzu.mp3"></audio>
+<audio id="kane" src="audio/kane.mp3"></audio>
+
+<script src="js/utils.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/omikuji-data.js"></script>
+<script src="js/omikuji.js"></script>
+
+</body>
+</html>
