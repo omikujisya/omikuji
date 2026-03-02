@@ -53,10 +53,11 @@
 
   <div class="top-info">
     <div id="omikuji-time"></div>
+
     <div class="visitor-count">
-      <div id="today-count"></div>
-      <div id="total-count"></div>
-    </div>
+  <div id="today-count"></div>
+  <div>総参拝数：<span id="visitor-count">...</span></div>
+</div>
   </div>
 
     <!-- ボタン -->
@@ -77,12 +78,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/fireba
 import { getFirestore, doc, getDoc, updateDoc, setDoc, increment } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "ここにあなたのapiKey",
-  authDomain: "ここにあなたのauthDomain",
-  projectId: "ここにあなたのprojectId",
-  storageBucket: "ここにあなたのstorageBucket",
-  messagingSenderId: "ここにあなたのmessagingSenderId",
-  appId: "ここにあなたのappId"
+  apiKey: "AIza....",
+  authDomain: "omikuji-117d7.firebaseapp.com",
+  projectId: "omikuji-117d7",
+  storageBucket: "omikuji-117d7.firebasestorage.app",
+  messagingSenderId: "4353....",
+  appId: "1:4353...."
 };
 
 const app = initializeApp(firebaseConfig);
@@ -110,6 +111,7 @@ updateCounter();
   
 </body>
 </html>
+
 
 
 
