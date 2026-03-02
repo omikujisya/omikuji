@@ -72,8 +72,45 @@
   <script src="js/sound.js"></script>
   <script src="js/top.js"></script>
 
+  <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, doc, getDoc, updateDoc, setDoc, increment } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "ここにあなたのapiKey",
+  authDomain: "ここにあなたのauthDomain",
+  projectId: "ここにあなたのprojectId",
+  storageBucket: "ここにあなたのstorageBucket",
+  messagingSenderId: "ここにあなたのmessagingSenderId",
+  appId: "ここにあなたのappId"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const counterRef = doc(db, "counter", "visits");
+
+async function updateCounter() {
+  const snap = await getDoc(counterRef);
+
+  if (snap.exists()) {
+    await updateDoc(counterRef, {
+      count: increment(1)
+    });
+  } else {
+    await setDoc(counterRef, { count: 1 });
+  }
+
+  const updatedSnap = await getDoc(counterRef);
+  document.getElementById("visitor-count").textContent = updatedSnap.data().count;
+}
+
+updateCounter();
+</script>
+  
 </body>
 </html>
+
 
 
 
